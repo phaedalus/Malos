@@ -11,6 +11,7 @@ export class MalosClock {
         this.paused = false;
         this.frameCount = 0;
         this.timers = [];
+        this.elapsed = 0;
         this.elapsed += this.delta;
         this.childClocks = new Map();
     }

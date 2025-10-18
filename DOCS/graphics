@@ -1,6 +1,0 @@
-game.Graphics.beginFrame("black");
-game.Graphics.drawRect(100, 100, 25, 25, "white");
-game.Graphics.drawCircle(200, 200, 50, "green");
-game.Graphics.drawLine(300, 300, 400, 400, "yellow", 5);
-game.Graphics.drawText("Hello, Malos!", 100, 150, "white", "20px Arial");
-game.Graphics.endFrame();

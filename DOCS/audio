@@ -1,5 +1,0 @@
-await game.Audio.load("banger", "assets/spurs.mp3");
-game.Audio.enqueue("music", "banger");
-
-await game.Audio.load("oof", "assets/oof.mp3");
-game.Audio.play("oof", { layer: "sfx", volume: 1.4 });
