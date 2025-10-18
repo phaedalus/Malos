@@ -3,6 +3,7 @@ import { CANVASAPI } from '../Render/RendererCANVAS.js';
 import { WEBGLAPI } from '../Render/RendererWEBGL.js';
 import { WEBGL2API } from '../Render/RendererWEBGL2.js';
 import { WEBGPUAPI } from '../Render/RendererWEBGPU.js';
+import { MalosClock } from '../Core/Clock.js';
 import { ShermanAudio } from '../Audio/AudioEngine.js';
 
 export class Malos {
@@ -33,7 +34,8 @@ export class Malos {
 
         const modules = {
             Graphics: graphics_api,
-            Audio: ShermanAudio
+            Audio: ShermanAudio,
+            Time: MalosClock
         };
 
         for (const [key, value] of Object.entries(this.config)) {
@@ -45,6 +47,8 @@ export class Malos {
                     this[key] = new modules[key](this, this.config.id);
                 } else if (key === "Audio") {
                     this[key] = new modules[key](this, this.config.audioConfig || {});
+                } else if (key === "Time") {
+                    this[key] = new modules[key](this.config.targetFPS || 60);
                 } else {
                     this[key] = new modules[key](this);
                 }
