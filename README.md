@@ -1,2 +1,2 @@
 # Malos
-a game engine
+Because the web should be modular by default.
