@@ -1,0 +1,10 @@
+{
+	"schema": 1,
+	"id": "malos",
+	"name": "Malos",
+	"version": "0.0.1",
+	"language": "javascript",
+	"source": {
+		"url": "https://github.com/Phaedalus/Malos"
+	}
+}
